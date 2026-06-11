@@ -1,12 +1,11 @@
-// Seleciona os elementos do HTML que vamos usar
-const botao = document.getElementById('botao-clique');
-const displayNumero = document.getElementById('numero');
+function verificarResposta(correta) {
+    const resultadoTexto = document.getElementById("resultado");
 
-// Cria a variável que vai guardar o valor do contador
-let contador = 0;
-
-// Adiciona um evento de "escuta" para o clique do botão
-botao.addEventListener('click', () => {
-    contador++; // Soma +1 ao contador
-    displayNumero.textContent = contador; // Atualiza o texto na tela
-});
+    if (correta) {
+        resultadoTexto.innerText = "🎉 Excelente! Planear as compras evita o desperdício, poupa dinheiro e ajuda a salvar o planeta.";
+        resultadoTexto.style.color = "#2e7d32"; // Verde para acerto
+    } else {
+        resultadoTexto.innerText = "❌ Tente outra vez! Dica: comprar por impulso ou sem planeamento costuma resultar em comida estragada no lixo.";
+        resultadoTexto.style.color = "#c62828"; // Vermelho para erro
+    }
+}

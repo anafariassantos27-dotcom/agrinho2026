@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo Separado</title>
+    <title>Projeto Prato Limpo - Contra o Desperdício</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Contador Interativo</h1>
-        <p id="numero">0</p>
-        <button id="botao-clique">Clique aqui!</button>
-    </div>
+    <header>
+        <div class="container">
+            <h1>Projeto Prato Limpo 2026</h1>
+            <p>Consciência no prato, futuro sem desperdício</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="sobre">
+            <h2>O que é o Prato Limpo?</h2>
+            <p>O projeto Prato Limpo é uma iniciativa educativa voltada para a conscientização sobre o desperdício de alimentos e a importância do consumo sustentável. Nosso objetivo é mostrar que pequenas mudanças de hábito na cozinha e no momento das refeições podem salvar toneladas de comida, proteger o meio ambiente e ajudar a combater a fome.</p>
+        </section>
+
+        <section class="quiz-container">
+            <h2>Desafio do Prato Limpo</h2>
+            <p>Teste as suas atitudes e descubra se sabe como evitar o desperdício!</p>
+            
+            <div id="pergunta-box">
+                <p id="pergunta">1. Qual é a melhor forma de evitar o desperdício de comida ao ir ao supermercado?</p>
+                <button class="btn-resposta" onclick="verificarResposta(false)">A) Comprar grandes quantidades de alimentos em promoção, mesmo sem planear.</button>
+                <button class="btn-resposta" onclick="verificarResposta(true)">B) Fazer uma lista de compras com base nas refeições planeadas para a semana.</button>
+                <button class="btn-resposta" onclick="verificarResposta(false)">C) Ir às compras com fome para garantir que compra de tudo um pouco.</button>
+            </div>
+
+            <p id="resultado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Website Temático Prato Limpo. Desenvolvido para fins educativos.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
